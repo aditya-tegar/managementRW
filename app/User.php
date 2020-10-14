@@ -44,6 +44,22 @@ class User extends Authenticatable
                 return $this->role_id == 1 || $this->role_id == 2 || $this->role_id == 3 || $this->role_id == 4;
                 break;
 
+            case 'manajemen_rt':
+                return $this->role_id != 2 && $this->role_id != 3 && $this->role_id != 4;
+                break;
+
+            case 'manajemen_rt_01':
+                return $this->role_id == 1 || $this->role_id == 5 || $this->role_id == 6 || $this->role_id == 7;
+                break;
+
+            case 'manajemen_rt_02':
+                return $this->role_id == 1 || $this->role_id == 8 || $this->role_id == 9 || $this->role_id == 10;
+                break;
+
+            case 'manajemen_rt_03':
+                return $this->role_id == 1 || $this->role_id == 11 || $this->role_id == 12 || $this->role_id == 13;
+                break;
+
             case 'admin':
                 return $this->role_id === 1;
                 break;

@@ -25,8 +25,10 @@
                 </li>
 
                 
-                @if (auth()->check() && auth()->user()->hasRole('ketuart') || auth()->user()->hasRole('admin'))
+                @if (auth()->check() && auth()->user()->hasRole('manajemen_rt'))
                 <li class="nav-header">MANAGEMENT RT</li>
+
+                @if(auth()->user()->hasRole('manajemen_rt_01'))
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
@@ -36,43 +38,50 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @if(auth()->user()->hasRole('ketua_rt_01'))
                         <li class="nav-item">
                             <a href="{{ route('warga01.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Warga </p>
                             </a>
                         </li>
-        
+                        @endif
+                        @if(auth()->user()->hasRole('bendahara_rt_01'))
                         <li class="nav-item">
                             <a href="{{ route('iuran01.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Iuran Warga </p>
                             </a>
                         </li>
-
+                        @endif
+                        @if(auth()->user()->hasRole('sekertaris_rt_01'))
                         <li class="nav-item">
                             <a href="{{ route('surat01.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Surat Menyurat </p>
                             </a>
                         </li>
-                        
+                        @endif
+                        @if(auth()->user()->hasRole('ketua_rt_01')||auth()->user()->hasRole('bendahara_rt_01'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_keuangan01') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Keuangan </p>
                             </a>
                         </li>
-
+                        @endif
+                        @if(auth()->user()->hasRole('ketua_rt_01') || auth()->user()->hasRole('sekertaris_rt_01'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_surat01') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Surat </p>
                             </a>
                         </li>
+                        @endif
                     </ul>
                 </li>
-
+                @endif
+                @if(auth()->user()->hasRole('manajemen_rt_02'))
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
@@ -82,43 +91,50 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @if(auth()->user()->hasRole('ketua_rt_02'))
                         <li class="nav-item">
                             <a href="{{ route('warga02.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Warga </p>
                             </a>
                         </li>
-        
+                        @endif
+                        @if(auth()->user()->hasRole('bendahara_rt_02'))
                         <li class="nav-item">
                             <a href="{{ route('iuran02.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Iuran Warga </p>
                             </a>
                         </li>
-
+                        @endif
+                        @if(auth()->user()->hasRole('sekertaris_rt_02'))
                         <li class="nav-item">
                             <a href="{{ route('surat02.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Surat Menyurat </p>
                             </a>
                         </li>
-                        
+                        @endif
+                        @if(auth()->user()->hasRole('ketua_rt_02')||auth()->user()->hasRole('bendahara_rt_02'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_keuangan02') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Keuangan </p>
                             </a>
                         </li>
-
+                        @endif
+                        @if(auth()->user()->hasRole('ketua_rt_02') || auth()->user()->hasRole('sekertaris_rt_02'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_surat02') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Surat </p>
                             </a>
                         </li>
+                        @endif
                     </ul>
                 </li>
-
+                @endif
+                @if(auth()->user()->hasRole('manajemen_rt_03'))
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
@@ -128,42 +144,49 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @if(auth()->user()->hasRole('ketua_rt_03'))
                         <li class="nav-item">
                             <a href="{{ route('warga03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Warga </p>
                             </a>
                         </li>
-        
+                        @endif
+                        @if(auth()->user()->hasRole('bendahara_rt_03'))
                         <li class="nav-item">
                             <a href="{{ route('iuran03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Iuran Warga </p>
                             </a>
                         </li>
-
+                        @endif
+                        @if(auth()->user()->hasRole('sekertaris_rt_03'))
                         <li class="nav-item">
                             <a href="{{ route('surat03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Surat Menyurat </p>
                             </a>
                         </li>
-                        
+                        @endif
+                        @if(auth()->user()->hasRole('ketua_rt_03')||auth()->user()->hasRole('bendahara_rt_03'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_keuangan03') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Keuangan </p>
                             </a>
                         </li>
-
+                        @endif
+                        @if(auth()->user()->hasRole('ketua_rt_03') || auth()->user()->hasRole('sekertaris_rt_03'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_surat03') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Surat </p>
                             </a>
                         </li>
+                        @endif
                     </ul>
                 </li>
+                @endif
                 @endif
 
 
