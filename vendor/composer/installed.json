@@ -1751,16 +1751,6 @@
             "laravel",
             "php",
             "phpspreadsheet"
-        ],
-        "funding": [
-            {
-                "url": "https://laravel-excel.com/commercial-support",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/patrickbrouwers",
-                "type": "github"
-            }
         ]
     },
     {
@@ -1824,12 +1814,6 @@
         "keywords": [
             "stream",
             "zip"
-        ],
-        "funding": [
-            {
-                "url": "https://opencollective.com/zipstream",
-                "type": "open_collective"
-            }
         ]
     },
     {
