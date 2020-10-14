@@ -40,32 +40,63 @@ class User extends Authenticatable
     public function hasRole($roleName)
     {
         switch ($roleName) {
+            case 'manajemen_rw':
+                return $this->role_id == 1 || $this->role_id == 2 || $this->role_id == 3 || $this->role_id == 4;
+                break;
+
             case 'admin':
                 return $this->role_id === 1;
                 break;
-            case 'ketuarw':
-                return $this->role_id === 2;
+            case 'ketua_rw':
+                return $this->role_id === 1 || $this->role_id === 2;
+                break;
+
+            case 'bendahara_rw':
+                return $this->role_id === 1 || $this->role_id === 3;
+            break;
+
+            case 'sekertaris_rw':
+                return $this->role_id === 1 || $this->role_id === 4;
                 break;
             
-            case 'ketuart':
-                return $this->role_id === 3;
+            case 'ketua_rt_01':
+                return $this->role_id === 1 || $this->role_id === 5;
                 break;
 
-            case 'sekertarisrw':
-                return $this->role_id === 4;
-                break;
-            case 'sekertarisrt':
-                return $this->role_id === 5;
+            case 'bendahara_rt_01':
+                return $this->role_id === 1 || $this->role_id === 6;
                 break;
 
-            case 'bendahararw':
-                return $this->role_id === 6;
+            case 'sekertaris_rt_01':
+                return $this->role_id === 1 || $this->role_id === 7;
                 break;
+            
+            case 'ketua_rt_02':
+                return $this->role_id === 1 || $this->role_id === 8;
+                break;
+
+            case 'bendahara_rt_02':
+                return $this->role_id === 1 || $this->role_id === 9;
+                break;
+
+            case 'sekertaris_rt_02':
+                return $this->role_id === 1 || $this->role_id === 10;
+                break;
+            
+            case 'ketua_rt_03':
+                return $this->role_id === 1 || $this->role_id === 11;
+                break;
+
+            case 'bendahara_rt_03':
+                return $this->role_id === 1 || $this->role_id === 12;
+                break;
+
+            case 'sekertaris_rt_03':
+                return $this->role_id === 1 || $this->role_id === 13;
+                break;
+
 
                 
-            case 'bendaharart':
-                return $this->role_id === 7;
-                break;
 
 
             default: return false;
