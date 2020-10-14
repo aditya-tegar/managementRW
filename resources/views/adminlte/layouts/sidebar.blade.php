@@ -25,7 +25,7 @@
                 </li>
 
                 
-                @if (auth()->check() && auth()->user()->hasRole('ketuart'))
+                @if (auth()->check() && auth()->user()->hasRole('ketuart') || auth()->user()->hasRole('admin'))
                 <li class="nav-header">MANAGEMENT RT</li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
@@ -164,9 +164,10 @@
                         </li>
                     </ul>
                 </li>
+                @endif
 
 
-                @elseif (auth()->check() && auth()->user()->hasRole('ketuarw'))
+                @if (auth()->check() && auth()->user()->hasRole('ketuarw')  || auth()->user()->hasRole('admin'))
                 <li class="nav-header">MANAGEMENT RW</li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">

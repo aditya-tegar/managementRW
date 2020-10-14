@@ -63,13 +63,16 @@
     <div class="form-group row">
         <label for="role" class="col-md-4 col-form-label text-md-right">Role</label>
         <div class="col-md-6">
-            <select name="role" class="form-control" >
-                <option value="1">Ketua RW</option>
+            <select name="role_id" class="form-control" >
+                {{-- <option value="1">Ketua RW</option>
                 <option value="2">Ketua RT</option>
                 <option value="3">Bendahara RW</option>
                 <option value="4">Sekertaris RW</option>
                 <option value="5">Bendahara RT</option>
-                <option value="6">Sekertaris RW</option>
+                <option value="6">Sekertaris RW</option> --}}
+                @foreach ($roles as $role)
+                    <option value="{{ $role->id }}">{{ $role->name }}</option>
+                @endforeach
             </select>
         </div>
     </div>

@@ -40,29 +40,33 @@ class User extends Authenticatable
     public function hasRole($roleName)
     {
         switch ($roleName) {
+            case 'admin':
+                return $this->role_id === 1;
+                break;
             case 'ketuarw':
-                return $this->role === 1;
+                return $this->role_id === 2;
                 break;
             
             case 'ketuart':
-                return $this->role === 2;
-                break;
-
-            case 'bendahararw':
-                return $this->role === 3;
+                return $this->role_id === 3;
                 break;
 
             case 'sekertarisrw':
-                return $this->role === 4;
+                return $this->role_id === 4;
                 break;
-                
-            case 'bendaharart':
-                return $this->role === 5;
+            case 'sekertarisrt':
+                return $this->role_id === 5;
                 break;
 
-            case 'sekertarisrt':
-                return $this->role === 6;
+            case 'bendahararw':
+                return $this->role_id === 6;
                 break;
+
+                
+            case 'bendaharart':
+                return $this->role_id === 7;
+                break;
+
 
             default: return false;
         }

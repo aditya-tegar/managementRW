@@ -6,7 +6,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
-
+use App\Role;
 trait RegistersUsers
 {
     use RedirectsUsers;
@@ -18,7 +18,8 @@ trait RegistersUsers
      */
     public function showRegistrationForm()
     {
-        return view('auth.register');
+        $roles = Role::where('id', '!=', 1)->get();
+        return view('auth.register', compact('roles'));
     }
 
     /**
