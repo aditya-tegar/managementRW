@@ -210,7 +210,7 @@
                             </a>
                         </li>
                         @endif
-                        @if(auth()->user()->hasRole('ketua_rw') || auth()->user()->hasRole('bendahara_rw'))
+                        @if(auth()->user()->hasRole('bendahara_rw'))
                         <li class="nav-item">
                             <a href="{{ route('iuranrw03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
