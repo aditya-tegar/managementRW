@@ -37,7 +37,6 @@ class Suratrw03Controller extends Controller
     }
 
     public function update(Request $request, Suratrw03 $suratrw03) {
-        $suratrw03->nama_warga = $request->nama_warga;
         $suratrw03->keterangan = $request->keterangan;
 
         if ($request->has('file')) {
