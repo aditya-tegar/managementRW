@@ -16,6 +16,7 @@ class Iuran02Controller extends Controller
     public function store(Request $request) {
         $iuran02 = new Iuran02([
             'nominal' => $request->nominal,
+            'jenis_iuran' => $request->jenis_iuran,
             'keterangan' => $request->keterangan,
         ]);
         
@@ -29,7 +30,7 @@ class Iuran02Controller extends Controller
 
     public function create()
     {
-        $warga01 = Warga02::all();
+        $warga02 = Warga02::all();
         return view('iuran02.create', compact('warga02'));
     }
 
@@ -39,6 +40,7 @@ class Iuran02Controller extends Controller
 
     public function update(Request $request, Iuran02 $iuran02) {
         $iuran02->nominal = $request->nominal;
+        $iuran02->jenis_iuran = $request->jenis_iuran;
         $iuran02->keterangan = $request->keterangan;
         $iuran02->save();
 

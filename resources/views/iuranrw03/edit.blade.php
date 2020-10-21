@@ -37,11 +37,24 @@
                         <div class="col-md-7">
                             <input id="nominal" type="number" name="nominal" class="form-control @error('nominal') is-invalid @enderror" name="nominal" value="{{ old('nominal') }}" required autocomplete="alamat" autofocus>
 
-                            @error('alamat')
+                            @error('nominal')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="jenis_iuran" class="col-md-3 col-form-label text-md-right">{{ __('Jenis Iuran') }}</label>
+
+                        <div class="col-md-7">
+                            <select class="form-control selec2bs4" name="jenis_iuran" id="jenis_iuran">
+                                <option value="Pilih">Pilih</option>
+                                <option value="K3">K3</option>
+                                <option value="Kas">Kas</option>
+                                <option value="Dana Sosial">Dana Sosial</option>
+                              </select>
                         </div>
                     </div>
 

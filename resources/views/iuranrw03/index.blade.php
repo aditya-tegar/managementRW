@@ -26,6 +26,7 @@
 		    				<th>Tanggal</th>
                             <th>RT</th>							
 							<th>Nama Ketua RT</th>
+							<th>Jenis Iuran</th>
 							<th>Nominal</th>
 		    				<th>Keterangan</th>
 		    				<th>Action</th>
@@ -37,6 +38,7 @@
 		    				<td>{{ $data->created_at->toDateString() }}</td>
 		    				<td>{{ $data->datarw03->nama_warga }}</td>
 							<td>{{ $data->datarw03->alamat }}</td>
+							<td>{{ $data->jenis_iuran }}</td>
 							<td>@currency ( $data->nominal ) </td>
 		    				<td>{{ $data->keterangan }}</td>
 		    				<td>
@@ -57,6 +59,7 @@
 							</tr>
 							@endforeach
 							<th>Total</th>
+							<th></th>
 							<th></th>
 							<th></th>
 							<th>@currency ($iuranrw03->sum('nominal'))</th>

@@ -9,7 +9,7 @@ class Iuran02 extends Model
     protected $table = 'iuran02';
 
     protected $fillable = [
-        'nama_warga', 'nominal', 'alamat','keterangan'
+        'nama_warga', 'nominal', 'jenis_iuran', 'alamat','keterangan'
     ];
 
     public function warga02()

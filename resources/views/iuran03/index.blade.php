@@ -26,6 +26,7 @@
 		    				<th>Tanggal</th>
                             <th>Nama Warga</th>							
 							<th>Alamat</th>
+							<th>Jenis Iuran</th>
 							<th>Nominal</th>
 		    				<th>Keterangan</th>
 		    				<th>Action</th>
@@ -37,6 +38,7 @@
 		    				<td>{{ $data->created_at->toDateString() }}</td>
 		    				<td>{{ $data->warga03->nama_warga }}</td>
 							<td>{{ $data->warga03->alamat }}</td>
+							<td>{{ $data->jenis_iuran }}</td>
 							<td>@currency ( $data->nominal ) </td>
 		    				<td>{{ $data->keterangan }}</td>
 		    				<td>

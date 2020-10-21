@@ -46,7 +46,7 @@
                             <select class="form-control selec2bs4 @error('alamat') is-invalid @enderror"
                                 style="width: 100%" name="warga02" required>
                                 <option disabled selected>Pilih</option>
-                                @foreach ($warga03 as $data)
+                                @foreach ($warga02 as $data)
                                     <option value="{{ $data->id }}">
                                         {{$data->alamat}}
                                     </option>         
@@ -58,6 +58,18 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="jenis_iuran" class="col-md-3 col-form-label text-md-right">{{ __('Jenis Iuran') }}</label>
+                        <div class="col-md-7">
+                            <select class="form-control selec2bs4" name="jenis_iuran" id="jenis_iuran">
+                                <option value="Pilih">Pilih</option>
+                                <option value="K3">K3</option>
+                                <option value="Kas">Kas</option>
+                                <option value="Dana Sosial">Dana Sosial</option>
+                              </select>
                         </div>
                     </div>
 

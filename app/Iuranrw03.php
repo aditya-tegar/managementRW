@@ -9,7 +9,7 @@ class Iuranrw03 extends Model
     protected $table = 'iuranrw03';
 
     protected $fillable = [
-        'nama_warga', 'nominal', 'alamat','keterangan'
+        'nama_warga', 'nominal', 'jenis_iuran', 'alamat','keterangan'
     ];
 
     public function datarw03()

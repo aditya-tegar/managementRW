@@ -17,6 +17,7 @@ class CreateIuran02Table extends Migration
             $table->id();
             $table->foreignId('warga02_id')->constrained('warga02');
             $table->string('nominal');
+            $table->string('jenis_iuran');
             $table->string('keterangan');
             $table->timestamps();
         });

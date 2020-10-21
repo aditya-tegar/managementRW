@@ -16,6 +16,7 @@ class Iuran03Controller extends Controller
     public function store(Request $request) {
         $iuran03 = new Iuran03([
             'nominal' => $request->nominal,
+            'jenis_iuran' => $request->jenis_iuran,
             'keterangan' => $request->keterangan,
         ]);
         
@@ -39,6 +40,7 @@ class Iuran03Controller extends Controller
 
     public function update(Request $request, Iuran03 $iuran03) {
         $iuran03->nominal = $request->nominal;
+        $iuran03->jenius_iuran = $request->jenis_iuran;
         $iuran03->keterangan = $request->keterangan;
         $iuran03->save();
 

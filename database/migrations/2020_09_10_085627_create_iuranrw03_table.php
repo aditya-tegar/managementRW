@@ -17,6 +17,7 @@ class CreateIuranrw03Table extends Migration
             $table->id();
             $table->foreignId('datarw03_id')->constrained('datarw03');
             $table->string('nominal');
+            $table->string('jenis_iuran');
             $table->string('keterangan');
             $table->timestamps();
         });
