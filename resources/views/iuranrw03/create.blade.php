@@ -75,7 +75,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group row">
+                    {{-- <div class="form-group row">
                         <label for="jenis_iuran" class="col-md-3 col-form-label text-md-right">{{ __('Jenis Iuran') }}</label>
                         <div class="col-md-7">
                             <select class="form-control selec2bs4" name="jenis_iuran" id="jenis_iuran">
@@ -85,7 +85,7 @@
                                 <option value="Dana Sosial">Dana Sosial</option>
                               </select>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group row">
                         <label for="keterangan" class="col-md-3 col-form-label text-md-right">{{ __('Keterangan') }}</label>

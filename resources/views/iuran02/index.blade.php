@@ -37,12 +37,12 @@
 		    			<tr>
 		    				<td>{{ $data->created_at->toDateString() }}</td>
 							<td>{{ $data->warga02->nama_warga }}</td>
-							<td>{{ $data->jenis_iuran }}</td>
 							<td>{{ $data->warga02->alamat }}</td>
+							<td>{{ $data->jenis_iuran }}</td>
 							<td>@currency ( $data->nominal ) </td>
 		    				<td>{{ $data->keterangan }}</td>
 		    				<td>
-								<a class="btn btn-warning btn-sm" href="{{ route('iuran01.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
+								<a class="btn btn-warning btn-sm" href="{{ route('iuran02.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
 									<i class="fas fa-pencil-alt"></i>
 								</a>
 								<a class="btn btn-danger btn-sm" href="#"

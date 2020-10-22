@@ -21,7 +21,7 @@
                         <label for="no_ktp" class="col-md-3 col-form-label text-md-right">{{ __('No KTP') }}</label>
 
                         <div class="col-md-7">
-                            <input id="no_ktp" type="text" name="no_ktp" class="form-control @error('no_ktp') is-invalid @enderror" name="no_ktp" value="{{ $warga01->no_ktp }}" required autocomplete="no_ktp" autofocus>
+                            <input id="no_ktp" type="text" name="no_ktp" class="form-control @error('no_ktp') is-invalid @enderror" name="no_ktp" value="{{ $warga02->no_ktp }}" required autocomplete="no_ktp" autofocus>
 
                             @error('no_ktp')
                                 <span class="invalid-feedback" role="alert">
@@ -35,7 +35,7 @@
                         <label for="nama_warga" class="col-md-3 col-form-label text-md-right">{{ __('Nama Warga') }}</label>
 
                         <div class="col-md-7">
-                            <input id="nama_warga" type="text" name="nama_warga" class="form-control @error('nama_warga') is-invalid @enderror" name="nama_warga" value="{{ $warga01->nama_warga }}" required autocomplete="nama_warga" autofocus>
+                            <input id="nama_warga" type="text" name="nama_warga" class="form-control @error('nama_warga') is-invalid @enderror" name="nama_warga" value="{{ $warga02->nama_warga }}" required autocomplete="nama_warga" autofocus>
 
                             @error('nama_warga')
                                 <span class="invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
                         <label for="alamat" class="col-md-3 col-form-label text-md-right">{{ __('Alamat') }}</label>
 
                         <div class="col-md-7">
-                            <input id="alamat" type="text" name="alamat" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ $warga01->alamat }}" required autocomplete="alamat" autofocus>
+                            <input id="alamat" type="text" name="alamat" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ $warga02->alamat }}" required autocomplete="alamat" autofocus>
 
                             @error('alamat')
                                 <span class="invalid-feedback" role="alert">
@@ -63,7 +63,7 @@
                         <label for="no_telepon" class="col-md-3 col-form-label text-md-right">{{ __('No Telepon') }}</label>
 
                         <div class="col-md-7">
-                            <input id="no_telepon" type="number" name="no_telepon" class="form-control @error('no_telepon') is-invalid @enderror" name="no_telepon" value="{{ $warga01->no_telepon }}" required autocomplete="no_telepon" autofocus>
+                            <input id="no_telepon" type="number" name="no_telepon" class="form-control @error('no_telepon') is-invalid @enderror" name="no_telepon" value="{{ $warga02->no_telepon }}" required autocomplete="no_telepon" autofocus>
 
                             @error('no_telepon')
                                 <span class="invalid-feedback" role="alert">

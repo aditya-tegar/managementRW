@@ -42,7 +42,7 @@
 							<td>@currency ( $data->nominal ) </td>
 		    				<td>{{ $data->keterangan }}</td>
 		    				<td>
-								<a class="btn btn-warning btn-sm" href="{{ route('iuran01.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
+								<a class="btn btn-warning btn-sm" href="{{ route('iuran03.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
 									<i class="fas fa-pencil-alt"></i>
 								</a>
 								<a class="btn btn-danger btn-sm" href="#"

@@ -52,6 +52,18 @@
                     </div>
 
                     <div class="form-group row">
+                        <label for="nominal" class="col-md-3 col-form-label text-md-right">{{ __('Nominal') }}</label>
+                        <div class="col-md-7">
+                            <select class="form-control selec2bs4" name="nominal" id="nominal">
+                                <option value="Pilih">Pilih</option>
+                                <option value="20000">20000-K3</option>
+                                <option value="5000">5000-Kas</option>
+                                <option value="10000">10000-Dana Sosial</option>
+                              </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
                         <label for="alamat" class="col-md-3 col-form-label text-md-right">{{ __('Alamat') }}</label>
 
                         <div class="col-md-7">
@@ -66,20 +78,6 @@
                             </select>
 
                             @error('alamat')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="nominal" class="col-md-3 col-form-label text-md-right">{{ __('Nominal') }}</label>
-
-                        <div class="col-md-7">
-                            <input id="nominal" type="text" name="nominal" class="form-control @error('nominal') is-invalid @enderror" name="nominal" value="{{ old('nominal') }}" required autocomplete="nominal" autofocus>
-
-                            @error('nominal')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

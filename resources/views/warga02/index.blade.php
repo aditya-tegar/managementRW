@@ -40,7 +40,7 @@
 		    				<td>{{ $data->alamat }}</td>
 		    				<td>{{ $data->no_telepon }}</td>
 		    				<td>
-								<a class="btn btn-warning btn-sm" href="{{ route('warga01.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
+								<a class="btn btn-warning btn-sm" href="{{ route('warga02.edit', $data->id) }}" data-toggle="tooltip" title="Edit">
 									<i class="fas fa-pencil-alt"></i>
 								</a>
 								<a class="btn btn-danger btn-sm" href="#"

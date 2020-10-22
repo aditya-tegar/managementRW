@@ -40,7 +40,7 @@ class Iuran03Controller extends Controller
 
     public function update(Request $request, Iuran03 $iuran03) {
         $iuran03->nominal = $request->nominal;
-        $iuran03->jenius_iuran = $request->jenis_iuran;
+        $iuran03->jenis_iuran = $request->jenis_iuran;
         $iuran03->keterangan = $request->keterangan;
         $iuran03->save();
 

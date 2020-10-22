@@ -75,6 +75,18 @@
 
                     <div class="form-group row">
                         <label for="nominal" class="col-md-3 col-form-label text-md-right">{{ __('Nominal') }}</label>
+                        <div class="col-md-7">
+                            <select class="form-control selec2bs4" name="nominal" id="nominal">
+                                <option value="Pilih">Pilih</option>
+                                <option value="20000">20000-K3</option>
+                                <option value="5000">5000-Kas</option>
+                                <option value="10000">10000-Dana Sosial</option>
+                              </select>
+                        </div>
+                    </div>
+
+                    {{-- <div class="form-group row">
+                        <label for="nominal" class="col-md-3 col-form-label text-md-right">{{ __('Nominal') }}</label>
 
                         <div class="col-md-7">
                             <input id="nominal" type="text" name="nominal" class="form-control @error('nominal') is-invalid @enderror" name="nominal" value="{{ old('nominal') }}" required autocomplete="nominal" autofocus>
@@ -85,7 +97,7 @@
                                 </span>
                             @enderror
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group row">
                         <label for="keterangan" class="col-md-3 col-form-label text-md-right">{{ __('Keterangan') }}</label>
