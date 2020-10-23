@@ -23,7 +23,7 @@
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="#"><b>Laravel</b></a>
+      <h3>Sistem Management RW 03</h3>
     </div>
     <!-- /.login-logo -->
     <div class="card">

@@ -1,7 +1,7 @@
 @extends('auth.master')
 
 {{-- Title --}}
-@section('title', "Laravel - Login")
+@section('title', "Sistem Management RW 03")
 
 @section('auth-content')
 <p class="login-box-msg">Sign in to start your session</p>
@@ -47,15 +47,15 @@
     </div>
 </form>
 
-@if (Route::has('password.request'))
+{{-- @if (Route::has('password.request'))
 <p class="mb-1 mt-3">
     <a href="{{ route('password.request') }}">I forgot my password</a>
 </p>
-@endif
+@endif --}}
 
-@if (Route::has('register'))
+{{-- @if (Route::has('register'))
 <p class="mb-0">
     <a href="{{ route('register') }}" class="text-center">Register a new account</a>
 </p>
-@endif
+@endif --}}
 @endsection
