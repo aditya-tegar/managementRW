@@ -38,13 +38,15 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        @if(auth()->user()->hasRole('admin'))
+                        @if(auth()->user()->hasRole('admin') && !auth()->user()->hasRole('warga_01'))
                         <li class="nav-item">
                             <a href="{{ route('warga01.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Warga </p>
                             </a>
                         </li>
+                        @endif
+                        @if(auth()->user()->hasRole('admin') || auth()->user()->hasRole('rt_01') && !auth()->user()->hasRole('warga_01'))
                         <li class="nav-item">
                             <a href="{{ route('iuran01.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -85,13 +87,15 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        @if(auth()->user()->hasRole('admin'))
+                        @if(auth()->user()->hasRole('admin') && !auth()->user()->hasRole('warga_02'))
                         <li class="nav-item">
                             <a href="{{ route('warga02.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Warga </p>
                             </a>
                         </li>
+                        @endif
+                        @if(auth()->user()->hasRole('admin') || auth()->user()->hasRole('rt_02') && !auth()->user()->hasRole('rt_02'))
                         <li class="nav-item">
                             <a href="{{ route('iuran02.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -119,7 +123,6 @@
                                 <p> Laporan Surat </p>
                             </a>
                         </li>
-                        @endif
                     </ul>
                 </li>
                 @endif
@@ -140,6 +143,8 @@
                                 <p> Data Warga </p>
                             </a>
                         </li>
+                        @endif
+                        @if(auth()->user()->hasRole('admin') || auth()->user()->hasRole('rt_03'))
                         <li class="nav-item">
                             <a href="{{ route('iuran03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -170,7 +175,7 @@
                     </ul>
                 </li>
                 @endif
-
+                @endif
 
                 @if (auth()->check() && auth()->user()->hasRole('manajemen_rw'))
                 <li class="nav-header">MANAGEMENT RW</li>
@@ -271,6 +276,29 @@
                                 <p> Laporan Data </p>
                             </a>
                         </li>
+                    </ul>
+                </li>
+                @endif
+                @if(auth()->user()->hasRole('admin'))
+                <li class="nav-header">MANAGEMENT USER</li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            User
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        {{-- @if(auth()->user()->hasRole('admin')) --}}
+                        <li class="nav-item">
+                            <a href="{{ route('user.index') }}" class="nav-link">
+                                <i class="nav-icon fas fa-file-invoice"></i>
+                                <p> Data user </p>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
                     </ul>
                 </li>
                 @endif

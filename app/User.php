@@ -45,19 +45,19 @@ class User extends Authenticatable
                 break;
 
             case 'manajemen_rt':
-                return $this->role_id != 6;
+                return true;
                 break;
 
             case 'manajemen_rt_01':
-                return $this->role_id == 1 || $this->role_id == 2 || $this->role_id == 3;
+                return $this->role_id == 1 || $this->role_id == 2 || $this->role_id == 3 || $this->role_id == 6;
                 break;
 
             case 'manajemen_rt_02':
-                return $this->role_id == 1 || $this->role_id == 2 || $this->role_id == 4;
+                return $this->role_id == 1 || $this->role_id == 2 || $this->role_id == 4 || $this->role_id == 7;
                 break;
 
             case 'manajemen_rt_03':
-                return $this->role_id == 1 || $this->role_id == 2 || $this->role_id == 5;
+                return $this->role_id == 1 || $this->role_id == 2 || $this->role_id == 5 || $this->role_id == 8;
                 break;
 
             case 'admin':
@@ -80,11 +80,23 @@ class User extends Authenticatable
                 return $this->role_id === 5;
                 break;
             
-            case 'warga':
+            case 'warga_01':
                 return $this->role_id === 6;
+                break;
+            
+            case 'warga_02':
+                return $this->role_id === 7;
+                break;
+            
+            case 'warga_03':
+                return $this->role_id === 8;
                 break;
 
             default: return false;
         }
+    }
+
+    public function role() {
+        return $this->belongsTo('App\Role');
     }
 }

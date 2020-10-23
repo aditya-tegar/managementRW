@@ -33,7 +33,15 @@ class UserSeeder extends Seeder
         $role->save();
 
         $role = new Role();
-        $role->name = "Warga";
+        $role->name = "Warga 01";
+        $role->save();
+
+        $role = new Role();
+        $role->name = "Warga 02";
+        $role->save();
+
+        $role = new Role();
+        $role->name = "Warga 03";
         $role->save();
 
         $user = new User();
@@ -72,10 +80,24 @@ class UserSeeder extends Seeder
         $user->save();
 
         $user = new User();
-        $user->name = "Warga";
-        $user->email = "warga@gmail.com";
+        $user->name = "Warga 01";
+        $user->email = "warga_01@gmail.com";
         $user->password = bcrypt("rahasia");
         $user->role_id = 6; 
+        $user->save();
+
+        $user = new User();
+        $user->name = "Warga 02";
+        $user->email = "warga_02@gmail.com";
+        $user->password = bcrypt("rahasia");
+        $user->role_id = 7; 
+        $user->save();
+
+        $user = new User();
+        $user->name = "Warga 03";
+        $user->email = "warga_03@gmail.com";
+        $user->password = bcrypt("rahasia");
+        $user->role_id = 8; 
         $user->save();
     }
 }

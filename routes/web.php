@@ -90,6 +90,7 @@ Route::resource('iuranrw03', 'Iuranrw03Controller');
 
 //Surat RW 03
 Route::resource('suratrw03', 'Suratrw03Controller');
+Route::resource('user', 'UserController');
 Route::get('suratrw03/{suratrw03}/download', 'Suratrw03Controller@download')->name('suratrw03.download');
 
 //Laporan_keuanganrw03
