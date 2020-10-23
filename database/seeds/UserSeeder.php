@@ -17,51 +17,23 @@ class UserSeeder extends Seeder
         $role->save();
 
         $role = new Role();
-        $role->name = "Ketua RW";
-        $role->save();
-        
-        $role = new Role();
-        $role->name = "Bendahara RW";
+        $role->name = "RW";
         $role->save();
 
         $role = new Role();
-        $role->name = "Sekertaris RW";
+        $role->name = "RT 01";
         $role->save();
 
         $role = new Role();
-        $role->name = "Ketua RT 01";
+        $role->name = "RT 02";
         $role->save();
 
         $role = new Role();
-        $role->name = "Bendahara RT 01";
+        $role->name = "RT 03";
         $role->save();
 
         $role = new Role();
-        $role->name = "Sekertaris RT 01";
-        $role->save();
-        
-        $role = new Role();
-        $role->name = "Ketua RT 02";
-        $role->save();
-
-        $role = new Role();
-        $role->name = "Bendahara RT 02";
-        $role->save();
-
-        $role = new Role();
-        $role->name = "Sekertaris RT 02";
-        $role->save();
-        
-        $role = new Role();
-        $role->name = "Ketua RT 03";
-        $role->save();
-
-        $role = new Role();
-        $role->name = "Bendahara RT 03";
-        $role->save();
-
-        $role = new Role();
-        $role->name = "Sekertaris RT 03";
+        $role->name = "Warga";
         $role->save();
 
         $user = new User();
@@ -79,80 +51,31 @@ class UserSeeder extends Seeder
         $user->save();
 
         $user = new User();
-        $user->name = "Bendahara RW";
-        $user->email = "bendahara_rw@gmail.com";
-        $user->password = bcrypt("rahasia");
-        $user->role_id = 3; 
-        $user->save();
-
-        $user = new User();
-        $user->name = "Sekertaris RW";
-        $user->email = "sekertaris_rw@gmail.com";
-        $user->password = bcrypt("rahasia");
-        $user->role_id = 4; 
-        $user->save();
-
-        $user = new User();
         $user->name = "Ketua RT 01";
         $user->email = "rt_01@gmail.com";
         $user->password = bcrypt("rahasia");
-        $user->role_id = 5; 
-        $user->save();
-
-        $user = new User();
-        $user->name = "Bendahara RT 01";
-        $user->email = "bendahara_rt_01@gmail.com";
-        $user->password = bcrypt("rahasia");
-        $user->role_id = 6; 
-        $user->save();
-
-        $user = new User();
-        $user->name = "Sekertaris RT 01";
-        $user->email = "sekertaris_rt_01@gmail.com";
-        $user->password = bcrypt("rahasia");
-        $user->role_id = 7; 
+        $user->role_id = 3; 
         $user->save();
 
         $user = new User();
         $user->name = "Ketua RT 02";
         $user->email = "rt_02@gmail.com";
         $user->password = bcrypt("rahasia");
-        $user->role_id = 8; 
-        $user->save();
-
-        $user = new User();
-        $user->name = "Bendahara RT 02";
-        $user->email = "bendahara_rt_02@gmail.com";
-        $user->password = bcrypt("rahasia");
-        $user->role_id = 9; 
-        $user->save();
-
-        $user = new User();
-        $user->name = "Sekertaris RT 02";
-        $user->email = "sekertaris_rt_02@gmail.com";
-        $user->password = bcrypt("rahasia");
-        $user->role_id = 10; 
+        $user->role_id = 4; 
         $user->save();
 
         $user = new User();
         $user->name = "Ketua RT 03";
         $user->email = "rt_03@gmail.com";
         $user->password = bcrypt("rahasia");
-        $user->role_id = 11; 
+        $user->role_id = 5; 
         $user->save();
 
         $user = new User();
-        $user->name = "Bendahara RT 03";
-        $user->email = "bendahara_rt_03@gmail.com";
+        $user->name = "Warga";
+        $user->email = "warga@gmail.com";
         $user->password = bcrypt("rahasia");
-        $user->role_id = 12; 
-        $user->save();
-
-        $user = new User();
-        $user->name = "Sekertaris RT 03";
-        $user->email = "sekertaris_rt_03@gmail.com";
-        $user->password = bcrypt("rahasia");
-        $user->role_id = 13; 
+        $user->role_id = 6; 
         $user->save();
     }
 }

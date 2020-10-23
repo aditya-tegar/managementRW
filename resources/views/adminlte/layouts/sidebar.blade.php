@@ -38,15 +38,13 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        @if(auth()->user()->hasRole('ketua_rt_01'))
+                        @if(auth()->user()->hasRole('admin'))
                         <li class="nav-item">
                             <a href="{{ route('warga01.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Warga </p>
                             </a>
                         </li>
-                        @endif
-                        @if(auth()->user()->hasRole('bendahara_rt_01'))
                         <li class="nav-item">
                             <a href="{{ route('iuran01.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -54,7 +52,7 @@
                             </a>
                         </li>
                         @endif
-                        @if(auth()->user()->hasRole('sekertaris_rt_01'))
+                        @if(auth()->user()->hasRole('rt_01'))
                         <li class="nav-item">
                             <a href="{{ route('surat01.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -62,22 +60,18 @@
                             </a>
                         </li>
                         @endif
-                        @if(auth()->user()->hasRole('ketua_rt_01')||auth()->user()->hasRole('bendahara_rt_01'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_keuangan01') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Keuangan </p>
                             </a>
                         </li>
-                        @endif
-                        @if(auth()->user()->hasRole('ketua_rt_01') || auth()->user()->hasRole('sekertaris_rt_01'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_surat01') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Surat </p>
                             </a>
                         </li>
-                        @endif
                     </ul>
                 </li>
                 @endif
@@ -91,15 +85,13 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        @if(auth()->user()->hasRole('ketua_rt_02'))
+                        @if(auth()->user()->hasRole('admin'))
                         <li class="nav-item">
                             <a href="{{ route('warga02.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Warga </p>
                             </a>
                         </li>
-                        @endif
-                        @if(auth()->user()->hasRole('bendahara_rt_02'))
                         <li class="nav-item">
                             <a href="{{ route('iuran02.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -107,7 +99,7 @@
                             </a>
                         </li>
                         @endif
-                        @if(auth()->user()->hasRole('sekertaris_rt_02'))
+                        @if(auth()->user()->hasRole('rt_02'))
                         <li class="nav-item">
                             <a href="{{ route('surat02.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -115,15 +107,12 @@
                             </a>
                         </li>
                         @endif
-                        @if(auth()->user()->hasRole('ketua_rt_02')||auth()->user()->hasRole('bendahara_rt_02'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_keuangan02') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Keuangan </p>
                             </a>
                         </li>
-                        @endif
-                        @if(auth()->user()->hasRole('ketua_rt_02') || auth()->user()->hasRole('sekertaris_rt_02'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_surat02') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -144,15 +133,13 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        @if(auth()->user()->hasRole('ketua_rt_03'))
+                        @if(auth()->user()->hasRole('admin'))
                         <li class="nav-item">
                             <a href="{{ route('warga03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data Warga </p>
                             </a>
                         </li>
-                        @endif
-                        @if(auth()->user()->hasRole('bendahara_rt_03'))
                         <li class="nav-item">
                             <a href="{{ route('iuran03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -160,7 +147,7 @@
                             </a>
                         </li>
                         @endif
-                        @if(auth()->user()->hasRole('sekertaris_rt_03'))
+                        @if(auth()->user()->hasRole('rt_03'))
                         <li class="nav-item">
                             <a href="{{ route('surat03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -168,25 +155,20 @@
                             </a>
                         </li>
                         @endif
-                        @if(auth()->user()->hasRole('ketua_rt_03')||auth()->user()->hasRole('bendahara_rt_03'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_keuangan03') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Keuangan </p>
                             </a>
                         </li>
-                        @endif
-                        @if(auth()->user()->hasRole('ketua_rt_03') || auth()->user()->hasRole('sekertaris_rt_03'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_surat03') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Surat </p>
                             </a>
                         </li>
-                        @endif
                     </ul>
                 </li>
-                @endif
                 @endif
 
 
@@ -202,15 +184,13 @@
                     </a>
 
                     <ul class="nav nav-treeview">
-                        @if(auth()->user()->hasRole('ketua_rw'))
+                        @if(auth()->user()->hasRole('admin'))
                         <li class="nav-item">
                             <a href="{{ route('datarw03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Data RT </p>
                             </a>
                         </li>
-                        @endif
-                        @if(auth()->user()->hasRole('bendahara_rw'))
                         <li class="nav-item">
                             <a href="{{ route('iuranrw03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -218,7 +198,7 @@
                             </a>
                         </li>
                         @endif
-                        @if(auth()->user()->hasRole('sekertaris_rw'))
+                        @if(!auth()->user()->hasRole('admin'))
                         <li class="nav-item">
                             <a href="{{ route('suratrw03.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
@@ -226,25 +206,20 @@
                             </a>
                         </li>
                         @endif
-                        @if(auth()->user()->hasRole('ketua_rw') || auth()->user()->hasRole('bendahara_rw'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_keuanganrw03') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Keuangan RW </p>
                             </a>
                         </li>
-                        @endif
-                        @if(auth()->user()->hasRole('sekertaris_rw') || auth()->user()->hasRole('ketua_rw'))
                         <li class="nav-item">
                             <a href="{{ url('/laporan_suratrw03') }}" class="nav-link">
                                 <i class="nav-icon fas fa-file-invoice"></i>
                                 <p> Laporan Surat RW </p>
                             </a>
                         </li>
-                        @endif
                     </ul>
        
-                @if(auth()->user()->hasRole('ketua_rw'))
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
@@ -301,7 +276,6 @@
                 @endif
             </ul>
         </nav>
-        @endif
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
