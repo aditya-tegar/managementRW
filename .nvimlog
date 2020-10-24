@@ -1,0 +1,5 @@
+INFO  2020-10-24T08:24:28.976 3579  channel_create_event:204: new channel 3 (function coc#rpc#start_server[17]..<SNR>20_start:45) : {"id": 3, "client": {}, "mode": "rpc", "stream": "job"}
+INFO  2020-10-24T08:24:29.128 3579  main:554: starting main loop
+INFO  2020-10-24T08:25:40.646 3579  os_proc_tree_kill:96: sending SIGTERM to PID -3581
+INFO  2020-10-24T08:25:40.649 3579  on_process_exit:393: exited: pid=3581 status=143 stoptime=167292519207
+INFO  2020-10-24T08:25:40.649 3579  os_exit:581: Nvim exit: 0
